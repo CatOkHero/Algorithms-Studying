@@ -1,5 +1,3 @@
-import java.sql.Date;
-
 // lgN
 public class WeightedQuickUnionUnionFindAlgorithm {
     private int[] size;
@@ -38,7 +36,7 @@ public class WeightedQuickUnionUnionFindAlgorithm {
         return root(p) == root(q);
     }
 
-    public void union(Date timeStamp, int p, int q) {
+    public void union(int p, int q) {
         int pid = root(p);
         int qid = root(q);
         if(pid == qid) {
@@ -46,17 +44,9 @@ public class WeightedQuickUnionUnionFindAlgorithm {
         } else if(size[pid] < size[qid]) {
             id[pid] = qid;
             size[qid] += size[pid];
-
-            if(size[qid] == id.length) {
-                System.out.println("The earliest time the friends are connected ".concat(timeStamp.toString()));
-            }
         } else {
             id[qid] = pid;
             size[pid] += size[qid];
-
-            if(size[qid] == id.length) {
-                System.out.println("The earliest time the friends are connected ".concat(timeStamp.toString()));
-            }
         }
     }
 }

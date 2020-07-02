@@ -47,22 +47,22 @@ public class Hello {
         // BreadthFirstSearchAlgorithm breadthFirstSearchAlgorithm = new BreadthFirstSearchAlgorithm();
         // breadthFirstSearchAlgorithm.BreadthFirstSearch(adjList, 3);
 
-        Integer[][] adjList = {
-                {1, 2},
-                {0, 4},
-                {3, 4},
-                {2, 6},
-                {1, 0},
-                {6, 5},
-                {3, 5},
-                {7, 0},
-                {1, 7},
-                {2, 7}
-            };
+        // Integer[][] adjList = {
+        //         {1, 2},
+        //         {0, 4},
+        //         {3, 4},
+        //         {2, 6},
+        //         {1, 0},
+        //         {6, 5},
+        //         {3, 5},
+        //         {7, 0},
+        //         {1, 7},
+        //         {2, 7}
+        //     };
 
-        WeightedQuickUnionUnionFindAlgorithm weightedQuickUnionUnionFindAlgorithm = new WeightedQuickUnionUnionFindAlgorithm(8);
-        for(int i = 0; i < adjList.length; i++) {
-            weightedQuickUnionUnionFindAlgorithm.union(i, adjList[i][0], adjList[i][1]);
-        }
+        // SocialNetworkConnectivityAlgorithm socialNetworkConnectivityAlgorithm = new SocialNetworkConnectivityAlgorithm(8);
+        // for(int i = 0; i < adjList.length; i++) {
+        //     socialNetworkConnectivityAlgorithm.union(i, adjList[i][0], adjList[i][1]);
+        // }
     }
 }
