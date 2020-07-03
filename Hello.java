@@ -55,6 +55,8 @@ public class Hello {
         //         {1, 0},
         //         {6, 5},
         //         {3, 5},
+        //         {3, 1},
+        //         {3, 2},
         //         {7, 0},
         //         {1, 7},
         //         {2, 7}
@@ -64,5 +66,22 @@ public class Hello {
         // for(int i = 0; i < adjList.length; i++) {
         //     socialNetworkConnectivityAlgorithm.union(i, adjList[i][0], adjList[i][1]);
         // }
+
+        
+        Integer[][] adjList = {
+                {1, 2},
+                {0, 4},
+                {2, 6},
+                {3, 1},
+                {3, 2},
+                {5, 0},
+                {1, 7},
+                {2, 7}
+            };
+        WeightedQuickUnionWithFind weightedQuickUnionWithFind = new WeightedQuickUnionWithFind(adjList.length);
+        for(int i = 0; i < adjList.length; i++) {
+            weightedQuickUnionWithFind.union(adjList[i][0], adjList[i][1]);
+        }
+        System.out.println(weightedQuickUnionWithFind.find(0));
     }
 }
